@@ -35,7 +35,7 @@ steps:
         set -e  # Termina el script si cualquier comando falla
 
         # Asegurar que se usa la suscripción correcta
-        # az account set --subscription "47cf5b83-0b7f-4ff7-b5fb-6e338131eef2"
+        az account set --subscription "6d65d945-65d3-48e7-8370-9bce1504bdbd"
 
         # Crear un grupo de recursos
         echo "Creando grupo de recursos..."
@@ -79,3 +79,4 @@ steps:
         # az vm run-command invoke --resource-group $(resourceGroupName) --name $(vmName) --command-id RunShellScript --scripts "sudo apt update && sudo apt install -y apache2"
         # az vm run-command invoke --resource-group $(resourceGroupName) --name $(vmName) --command-id RunShellScript --scripts "echo 'hola curso devops hemos automatizado el despliegue de maquina virtual desde azure devops' | sudo tee /var/www/html/index.html"
         # echo "Apache instalado y página de bienvenida configurada."
+
